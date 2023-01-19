@@ -1,0 +1,34 @@
+#ifdef MODULE
+#undef MODULE
+#endif
+#define MODULE                 USER_MODULE   // [Module] Select default model (the list is kModuleNiceList() in file tasmota_template.h) USER_MODULE is the TEMPLATE
+
+#ifdef FALLBACK_MODULE
+#undef FALLBACK_MODULE
+#endif
+#define FALLBACK_MODULE        USER_MODULE   // to Select the default model as FALLBACK when the user does a RESET 1 
+
+#ifdef USER_TEMPLATE
+#undef USER_TEMPLATE
+#endif
+#define USER_TEMPLATE          "{\"NAME\":\"Athom Zigbee Bridge\",\"GPIO\":[32,0,0,0,0,0,0,0,3552,0,3584,544,0,0,5600,0,0,0,0,5568,0,0,0,0,0,0,0,1,5792,0,0,0,0,0,0,0],\"FLAG\":0,\"BASE\":1}" // [Template] Set JSON template
+
+// Enable ZNP protocol
+
+#ifdef USE_ZIGBEE_ZNP
+#undef USE_ZIGBEE_ZNP
+#endif
+#define USE_ZIGBEE_ZNP
+
+#define USE_ZIGBEE_CHANNEL  15  // Zigbee Channel (11-26)
+#define USE_ZIGBEE_TXRADIO_DBM  20  // Tx Radio power in dBm (only for EZSP, EFR32 can go up to 20 dBm)
+#define USE_ZIGBEE_COALESCE_ATTR_TIMER 350  // timer to coalesce attribute values (in ms)
+#define USE_ZIGBEE_MODELID      "Tasmota Z2T"// reported "ModelId"      (cluster 0000 / attribute 0005)
+#define USE_ZIGBEE_MANUFACTURER "Tasmota"  // reported "Manufacturer" (cluster 0000 / attribute 0004)
+
+
+
+
+
+
+
