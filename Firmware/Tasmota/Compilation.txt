@@ -27,7 +27,9 @@
 #define USE_ZIGBEE_MANUFACTURER "Tasmota"  // reported "Manufacturer" (cluster 0000 / attribute 0004)
 
 
-
+#ifndef USE_TCP_BRIDGE 
+#define USE_TCP_BRIDGE          //  Add support for Serial to TCP bridge (+1.3k code)
+#endif
 
 
 
